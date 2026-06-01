@@ -5,8 +5,11 @@ const estilo = StyleSheet.create({
   texto: {
     color: root.colors.texto,
     fontSize: "16px",
+  },
+  titulo{
+
   }
-})
+},
 
 export default function Paragrafo({conteudo})  {
   return(
