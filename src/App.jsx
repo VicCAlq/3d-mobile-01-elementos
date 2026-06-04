@@ -4,12 +4,16 @@ import root from './styles/main';
 import Divisoria from './components/Divisoria';
 import Paragrafo from './components/Paragrafo';
 import Botao from './components/Botao';
+import AtvParagrafo from './components/AtvParagrafo';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Divisoria>
-        <Paragrafo conteudo="Sou um exemplo"/>
+        <AtvParagrafo 
+          titulo="nnfaf"
+          conteudo="dfb"
+        />
         <Botao/>
       </Divisoria>
       <StatusBar style="auto" />
