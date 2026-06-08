@@ -1,15 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import root from './styles/main';
-import Divisoria from './components/Divisoria';
+import AtvDivisoria from './components/AtvDivisoria';
 import Paragrafo from './components/Paragrafo';
 import Botao from './components/Botao';
-// asd
+import AtvParagrafo from './components/AtvParagrafo';
+
 export default function App() {
   return (
     <View style={styles.container}>
       <Divisoria>
-        <Paragrafo conteudo="Sou um exemplo"/>
+        <AtvParagrafo 
+          titulo="app"
+          conteudo="conteudo do app"
+        />
         <Botao/>
       </Divisoria>
       <StatusBar style="auto" />
