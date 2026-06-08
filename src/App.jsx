@@ -4,7 +4,7 @@ import root from './styles/main';
 import Divisoria from './components/Divisoria';
 import Paragrafo from './components/Paragrafo';
 import Botao from './components/Botao';
-
+import AtvDivisoria from './componentes/AtvDivisoria';
 export default function App() {
   return (
     <View style={styles.container}>
@@ -28,3 +28,14 @@ const styles = StyleSheet.create({
     color: root.colors.texto
   }
 });
+
+return (
+    <View style={styles.container}>
+      <Divisoria>
+        <Paragrafo conteudo="Sou um exemplo"/>
+        <Botao/>
+      </Divisoria>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
