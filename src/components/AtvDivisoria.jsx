@@ -12,6 +12,9 @@ argumento largura = 30
 import { View, StyleSheet } from 'react-native';
 import root from '../styles/main';
 
+
+export default function AtvDivisoria({ largura }) {
+  
 const estilo = StyleSheet.create({
   view: {
     width: '90vw',
@@ -25,7 +28,6 @@ const estilo = StyleSheet.create({
   },
 })
 
-export default function AtvDivisoria({ largura }) {
   return (
     <View style={estilo.view}>
       <View style={estilo.row}>
