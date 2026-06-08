@@ -15,16 +15,21 @@ export default function AtvDivisoria()
 const estilo = StyleSheet.create(
     {
         principal :{
+           height :"120px",
             width:"90vw",
-            backgroundColor:"green"
+            backgroundColor:"green",
+            display:"flex",
+            flexDirection:"row"
         },
         esquerda : 
         {
-            width : "27vw",
+            height:"100px",
+            width : String(largura) + "%",
             backgroundColor :"gray"
         },
                 direita :{
-width: "63vw",
+ height:"100px",
+            width : String(100 - largura) + "%",
 backgroundColor :"blue"
         },
     }
