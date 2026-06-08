@@ -4,10 +4,14 @@ import root from './styles/main';
 import Divisoria from './components/Divisoria';
 import Paragrafo from './components/Paragrafo';
 import Botao from './components/Botao';
+import AtvParagrafo from './components/AtvParagrafo';
+import AtvDivisoria from './components/AtvDivisoria';
 
 export default function App() {
   return (
+    
     <View style={styles.container}>
+      <AtvDivisoria largura={10}/>
       <Divisoria>
         <Paragrafo conteudo="Sou um exemplo"/>
         <Botao/>
