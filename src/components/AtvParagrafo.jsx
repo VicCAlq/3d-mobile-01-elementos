@@ -10,8 +10,8 @@ const estilo = StyleSheet.create({
   titilo: {
     color: rgb(117, 117, 117),
     fontSize: "32px",
-  }
-  cont: {
+  },
+  conteudo: {
     color: rgb(65, 65, 65),
     fontSize: "16px"
   }
