@@ -37,4 +37,4 @@ export default function AtvDivisoria({largura}){
             <View style={estilo.direita}></View>
         </View>
     )
-}
+}  
