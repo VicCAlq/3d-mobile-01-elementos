@@ -11,8 +11,10 @@ argumento largura = 30
 
 import {View, StyleSheet} from "react-native";
 
+
 export default function AtvDivisoria({largura}){
-    const estilo = StyleSheet.creat({
+
+    const estilo = StyleSheet.create({
         principal:{
             height: "120px",
             width: "90vw",
@@ -22,7 +24,7 @@ export default function AtvDivisoria({largura}){
         },
         esquerda: {
             height: "100px",
-            width: "String(largura) + "%" ",
+            width: String(largura) + "%",
             backgroundColor: "teal"
         },
         direita:{
@@ -34,8 +36,8 @@ export default function AtvDivisoria({largura}){
 
     return(
         <View style={estilo.principal}>
-            <View style={estilo.esquerda}></View>
-            <View style={estilo.direita}></View>
+            <View style={estilo.esquerda}>{largura}</View>
+            <View style={estilo.direita}>{largura}</View>
         </View>
     )
 }
