@@ -1,3 +1,4 @@
+
 /*
 [ATIVIDADE DIVISÓRIA]
 
@@ -8,3 +9,31 @@ argumento largura = 30
 <View> esquerda = 30% da largura da View inicial (30% de 90% da largura da tela)
 <View> direita = 70% da largura da View inicial (70% de 90% da largura da  tela)
 */
+import { View, StyleSheet } from 'react-native';
+import root from '../styles/main';
+
+
+export default function AtvDivisoria({ largura }) {
+  
+const estilo = StyleSheet.create({
+  view: {
+    width: '90vw',
+    borderRadius: "10px",
+    padding: root.spacings.paddingG,
+    backgroundColor: root.colors.foreground,
+    gap: root.spacings.gap
+  },
+  row: {
+    flexDirection: 'row',
+  },
+})
+
+  return (
+    <View style={estilo.view}>
+      <View style={estilo.row}>
+        <View style={{ width: largura + '%' }} />
+        <View style={{ width: (100 - largura) + '%' }} />
+      </View>
+    </View>
+  )
+}
