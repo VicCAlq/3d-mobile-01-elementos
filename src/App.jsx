@@ -4,7 +4,7 @@ import root from './styles/main';
 import Divisoria from './components/Divisoria';
 import Paragrafo from './components/Paragrafo';
 import Botao from './components/Botao';
-
+//
 export default function App() {
   return (
     <View style={styles.container}>
