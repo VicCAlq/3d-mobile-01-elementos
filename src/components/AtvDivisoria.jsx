@@ -1,4 +1,33 @@
-/*
+import {View, StyleSheet} from "react-native";
+
+
+export default function AtvDivisoria({largura}){
+    const estilo = StyleSheet.creat({
+
+    const estilo = StyleSheet.create({
+        principal:{
+            height: "120px",
+            width: "90vw",
+@@ -22,7 +24,7 @@ export default function AtvDivisoria({largura}){
+        },
+        esquerda: {
+            height: "100px",
+            width: "String(largura) + "%" ",
+            width: String(largura) + "%",
+            backgroundColor: "teal"
+        },
+        direita:{
+@@ -34,8 +36,8 @@ export default function AtvDivisoria({largura}){
+
+    return(
+        <View style={estilo.principal}>
+            <View style={estilo.esquerda}></View>
+            <View style={estilo.direita}></View>
+            <View style={estilo.esquerda}>{largura}</View>
+            <View style={estilo.direita}>{largura}</View>
+        </View>
+    )
+}/*
 [ATIVIDADE DIVISÓRIA]
 
 Crie e exporte por padrão um componente chamado "AtvDivisoria" que recebe um argumento "largura", cujo valor pode ser entre 10 e 90. O componente deve exibir uma <View> que ocupe 90% da largura da tela visível (use a propriedade "width" com o valor "90vw" para isso), e dentro desta <View> devem ter duas outras <View> exibidas lado a lado. A <View> da esquerda deve ocupar uma percentagem da <View> inicial, essa percentagem é determinada pelo argumento "largura". A <View> da direita deve ocupar a largura restante da <View> inicial. Exemplo:
