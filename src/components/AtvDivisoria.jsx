@@ -8,38 +8,37 @@ argumento largura = 30
 <View> esquerda = 30% da largura da View inicial (30% de 90% da largura da tela)
 <View> direita = 70% da largura da View inicial (70% de 90% da largura da  tela)
 */
-import {View, Text, StyleSheet } from 'react-native';
-import root from '../styles/main';
 
-export default function AtvDivisoria({largura}) {
+import { View, StyleSheet } from 'react-native';
+export default function AtvDivisoria()
+{largura}
+const estilo = StyleSheet.create(
+    {
+        principal :{
+           height :"120px",
+            width:"90vw",
+            backgroundColor:"green",
+            display:"flex",
+            flexDirection:"row"
+        },
+        esquerda : 
+        {
+            height:"100px",
+            width : String(largura) + "%",
+            backgroundColor :"gray"
+        },
+                direita :{
+ height:"100px",
+            width : String(100 - largura) + "%",
+backgroundColor :"blue"
+        },
+    }
+)
 
+return (
+    <View style = {estilo.principal}>
+          <View style = {estilo.esquerda}></View>
+            <View style = {estilo.direita}></View>
 
-const estilo = StyleSheet.create({
-  titulo: {
-    height: "120px",
-    width: "90vw",
-    backgroundColor: "blue",
-    display: "flex",
-    flexDirection: "row",
-  },
-  esquerda: {
-      height: "100px",
-    width: String(largura) + "%",
-    backgroundColor: "purple",
-  },
- direita: {
-    height: "100px",
-    width: String(100-largura) + "%",
-    backgroundColor: "purple",
- }
-
-})
-
-  return(
-    <View>
-        <View style={estilo.titulo}></View>
-        <View style={estilo.esquerda}></View>
-         <View style={estilo.direita}></View>
-    </View>
-  )
-}
+  </View>
+)
