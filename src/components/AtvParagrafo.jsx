@@ -3,25 +3,22 @@
 
 Crie e exporte por padrão um componente chamado "AtvParagrafo" que recebe dois argumentos: um "titulo" e um "conteudo". O componente deve exibir uma <View> com dois elementos <Text> internos, um que terá o conteúdo do argumento "título" e outro que terá o conteúdo do argumento "conteudo". O texto de "titulo" deve ter o tamanho de 32px, e o texto de "conteudo" deve ter o tamanho de 16px. O texto do "titulo" deve ficar acima do texto do "conteudo".
 */
-import {View, Text, StyleSheet} from 'react-native'
 
-
-const estilo = StyleSheet.create({
-    titulo: {
-        cor: "white",
-        textSize: "32px"
-    },
-    conteudo: {
-        cor: "purple",
-        textSize: "16px"
-    }
-})
-
-export default function AtvParagrafo({conteudo, cor, titulo}) {
-    return(
-        <View>
-            <Text style = {[estilo.titulo, {color: cor}]}>{titulo}{cor}</Text>
-            <Text style = {[estilo.conteudo, {color: cor}]} >{conteudo}{cor}</Text>
-        </View>
-    )
+import { Text, StyleSheet } from 'react-native';
+export default function AtvParagrafo({ titulo, conteudo }) {
+  return (
+    <View>
+      <Text style={styles.titulo}>{titulo}</Text>
+      <Text style={styles.conteudo}>{conteudo}</Text>
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  titulo: {
+    fontSize: "32px",
+  },
+  conteudo: {
+    fontSize: "16px",
+  },
+});
